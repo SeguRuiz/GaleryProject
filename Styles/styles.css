@@ -12,7 +12,7 @@ height: 100vh;
 .cajaPrincipal{
 display: grid;
 grid-template-columns: 50% auto ;
-background-color: blueviolet;
+
 height: 400px;
 width: 700px;
 
@@ -23,7 +23,7 @@ display: grid;
 grid-template-columns: auto;
 grid-template-rows: auto auto auto;
 
-background-color: lightgray;
+
 
 }
 
@@ -39,7 +39,7 @@ padding: 5px;
 display: grid;
 grid-template-columns: auto 50% auto;
 gap: 10px;
-background-color: lightcyan;
+
 }
 
 .caja{
@@ -57,7 +57,7 @@ padding: 5px;
 display: grid;
 grid-template-columns: 35% auto 35%;
 gap: 10px;
-background-color: lightseagreen;
+
 }
 
 .fila3{
@@ -65,30 +65,76 @@ padding: 5px;
 display: grid;
 grid-template-columns: auto 50% auto;
 gap: 10px;
-background-color: lightpink;
+
 }
 
 
 
 .inputsLog{
+padding: 5px;
 display: grid;
 grid-template-columns: auto;
-grid-template-rows: 80% 20%;
-background-color: antiquewhite;
+grid-template-rows: 80% auto;
+gap: 5px;
+
 }
 
 .inputs{
-display: flex;
-justify-content: center;
-align-items: center;
+display: grid;
+border-radius: 20px;
 background-color: lightcoral;
 
 }
-
+#inputsL{
+border: black none;
+border-radius: 20px;
+border: none;
+margin: 40px 20px 40px 20px;
+}
+.btnL{
+border: none;
+border-radius: 20px;
+margin: 20px 50px 20px 50px;
+}
+.divL{
+display: grid;
+}
 .registerBtn{
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 background-color: lightgreen;
 
 }
+
+/* Estilos register*/
+
+.hojaP{
+border-radius: 20px;
+display: grid;
+height: 500px;
+width: 300px;
+background-color: lightcoral;
+
+
+}
+
+#inputsR{
+border: none;
+border-radius: 20px;
+
+margin: 40px 20px 40px 20px;
+
+}
+
+.btnRegister{
+    border: none;
+    border-radius: 20px;
+    margin: 70px 50px 70px 50px;
+
+}
+
+
+
+
