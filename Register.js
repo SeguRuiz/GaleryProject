@@ -12,10 +12,25 @@ let lista = {
   nombre: user, email: email, password: password
 }     
 // local en blanco
+console.log(lista)
 let cuentas = JSON.parse(localStorage.getItem('cuentas')) || []
 cuentas.push(lista)
+console.log(cuentas)
 localStorage.setItem('cuentas', JSON.stringify(cuentas))
-// busca de mi objeto lista a lista.passaword busclo en cuentas
+
+
+// for comparador
+for (let index = 0; index < cuentas.length - 1; index++) {
+  let validacion = cuentas[index].email
+
+ if (validacion == email) {
+  return alert('Este correo ya fue registrado, prueba otro!')
+ } else {
+  window.location.href = 'http://127.0.0.1:5500/Login.html'
+ }
+  
+}
+
 
 });
 
