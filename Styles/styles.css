@@ -1,5 +1,5 @@
 /* Estilos log in */
-body{
+.centrar{
 display: flex;
 align-items: center;
 justify-content: center;
@@ -89,7 +89,7 @@ background-color: lightcoral;
 border: black none;
 border-radius: 20px;
 border: none;
-margin: 40px 20px 40px 20px;
+margin: 20px 10px 20px 10px;
 }
 .btnL{
 border: none;
