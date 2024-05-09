@@ -91,6 +91,11 @@ border-radius: 20px;
 border: none;
 margin: 20px 10px 20px 10px;
 }
+
+.inputsL:focus{
+outline: none;
+}
+
 .btnL{
 border: none;
 border-radius: 20px;
@@ -130,8 +135,11 @@ background-color: lightcoral;
 .inputsR{
 border: none;
 border-radius: 20px;
-
 margin: 30px 20px 30px 20px;
+
+}
+.inputsR:focus{
+outline: none;
 
 }
 

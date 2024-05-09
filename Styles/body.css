@@ -1,0 +1,110 @@
+#body{
+
+margin: 0;
+padding: 0;
+background-color: aqua;
+
+
+}
+.gridPrincipal{
+    
+    height: 700px;
+    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% auto ;
+}
+/*nav*/
+.nav{
+gap: 10px;
+display: grid;
+grid-template-columns: 60% auto auto;
+
+background-color: lightcoral;
+}
+
+.userInfo{
+
+background-color: lightblue;
+}
+
+.registrate{
+background-color: lightseagreen;
+
+}
+
+.logOut{
+
+background-color: lightyellow;
+}
+
+/*main*/
+
+.main{
+display: grid;
+grid-template-columns: 60% auto;
+gap: 20px;
+background-color: lightgreen;
+
+background-color: lightgray;
+}
+
+.relleno{
+    border-radius: 20px;
+    margin: 10px;
+   display: grid;
+   justify-content: center;
+   grid-template-rows: 30% auto;
+    background-color: lightgreen;
+}
+
+.inputs{
+    display: grid;
+    background-color: lightblue;
+}
+#inputTitulo{
+    margin: 35px 10px 35px 10px;
+    border-style: none;
+    border-radius: 20px;
+
+}
+#inputTitulo:focus{
+outline: none;
+}
+
+
+.imagenes{
+    margin: 10px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+    
+}
+
+.divImg{
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+#inputTitulo{
+
+margin: ;
+
+}
+/*imagenes*/
+
+
+/*foorter*/
+
+.footer{
+    background-color: lightsalmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: lightskyblue;
+
+}
+
+

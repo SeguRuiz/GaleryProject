@@ -1,4 +1,4 @@
-let formLog = document.getElementById('formLog')
+let formLog = document.getElementById('formLog') // forms
 
 formLog.addEventListener('submit', (quedate) => {
 quedate.preventDefault()
