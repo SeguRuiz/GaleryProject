@@ -1,5 +1,5 @@
 #body{
-
+background-color: #1d3557;
 margin: 0;
 padding: 10px;
 
@@ -7,12 +7,13 @@ padding: 10px;
 
 }
 .gridPrincipal{
-    
+    background-color: li;
     height: 700px;
     background-color: ;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 10% auto ;
+    background-color: #1d3557;
 }
 /*nav*/
 .nav{
@@ -82,7 +83,7 @@ background-color: ;
     margin: 10px;
    display: grid;
    
-   grid-template-rows: 30% auto;
+   grid-template-rows: 40% auto;
     background-color: ;
 
 }
@@ -96,8 +97,8 @@ background-color: ;
     display: grid;
     background-color: ;
 }
-#inputTitulo2{
-    margin:  40px 10px 40px 10px;
+.inputTitulo2{
+    margin:  20px 10px 20px 10px;
     border-style: none;
     border-radius: 20px;
 
@@ -167,4 +168,39 @@ background-color: lightskyblue;
 
 }
 
+/*modal*/
+.modalImg{
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: 10% auto;
+border-radius: 20px;
+border-style: none;
+position: fixed;
+inset: 0;
+margin: auto;
+height: 500px;
+width: 500px;
+background-color: lightcoral;
+}
 
+.modalDesc{
+background-color: lightblue;
+}
+
+.modalTitle{
+background-color: lightgreen;
+
+}
+
+.modalImgCentral{
+background-color: lightseagreen;
+}
+
+.salirseModal{
+grid-column: 1 / span1;
+}
+
+.infoImg{
+
+
+}

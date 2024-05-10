@@ -1,4 +1,21 @@
 let log = document.getElementById('logeate')
+//titulo y descripcion de la imagen
+let tituloImg = document.getElementById('inputTitulo2')
+let descripcionImg = document.getElementById('descripcionIMG')
+//salirse del modal
+let btnSalir = document.getElementById('salirModal')
+
+//Modal
+let modalTitle = document.getElementById('modalTitle')
+let modalDEsc = document.getElementById('modalDesc')
+
+let modal = document.getElementById('modalImg')
+btnSalir.addEventListener('click', ()=>{
+modal.close()
+})
+
+
+
 
 log.addEventListener('click', ()=>{
   window.location.href = 'http://127.0.0.1:5500/Login.html'
@@ -22,9 +39,13 @@ let imgs = JSON.parse(localStorage.getItem(usuarios.nombre)) || []
 
 if ( usuarios != null) {
   
-  log.innerHTML = ''
+  log.innerHTML = '';
   
+  
+}else{
+  console.log(logOut);;
 }
+
 
 document.getElementById('bienvenida').innerHTML = 'Bienvenid@ ' + usuarios.nombre + ' ¿que imagen subiras hoy?'
 
@@ -53,28 +74,45 @@ window.location.href = 'http://127.0.0.1:5500/Login.html'
 //revisa datos de imagen
 for (let m = 0; m < imgs.length; m++) {
   const revisaImgs = imgs[m].imgs;
-
-
+  const revisaTitle = imgs[m].titulo
 
 
   let div = document.createElement('div')
   let img = document.createElement('img')
+  
   img.src = revisaImgs
   img.classList.add('img')
   div.classList.add('divImg')
+  
+ 
 
   imagenes.appendChild(div)
   div.appendChild(img)
 
+  img.addEventListener('click', ()=>{
+
+    if (img.src == imgs[m].imgs) {
+      modalTitle.innerHTML = revisaTitle
+    }
+    modal.showModal()
+  })
+    
+  
+  
+  
   
 }
+
+
+
+
 //crea elemento automatico
 
 //guarda imagenes
 let inputTitulo = document.getElementById("inputTitulo");
 
 inputTitulo.addEventListener("change", (x) => {
-
+ 
   
   let archivo = inputTitulo.files[0];
 
@@ -82,6 +120,7 @@ inputTitulo.addEventListener("change", (x) => {
 
   leelo.addEventListener("load", () => {
     let img = {
+      titulo: tituloImg.value,
       usuario: usuarios.nombre,
       imgs: leelo.result,
     };
@@ -90,6 +129,7 @@ inputTitulo.addEventListener("change", (x) => {
     
     imgs.push(img);
     localStorage.setItem(usuarios.nombre, JSON.stringify(imgs));
+    
     window.location.reload()
   });
 
