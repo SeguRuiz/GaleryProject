@@ -2,13 +2,13 @@ let logOut = document.getElementById("LogOut");
 let input = document.getElementById("distintivo");
 let btn = document.getElementById("btn");
 let bienvenida = document.getElementById("bienvenida");
-let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+
 let texto = document.createElement("h1");
 
 
 
 //Afinar esta logica para mañana
-if (usuarios != null) {
+/*if (usuarios != null) {
   document.getElementById("logeate").innerHTML = "";
   bienvenida.innerHTML = "Bienvenido " + usuarios.nombre;
   btn.addEventListener("click", () => {
@@ -38,4 +38,4 @@ if (usuarios != null) {
 logOut.addEventListener("click", () => {
   localStorage.removeItem("usuarios");
   window.location.reload();
-});
+});*/

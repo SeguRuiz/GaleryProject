@@ -24,6 +24,7 @@ if (buscador) {
    
    
    
+   
 } else {
     if (findUser == null) {
      return alert('Tu usuario no es el correcto')
