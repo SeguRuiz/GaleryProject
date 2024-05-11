@@ -1,4 +1,5 @@
 let log = document.getElementById('logeate')
+
 //titulo y descripcion de la imagen
 let tituloImg = document.getElementById('inputTitulo2')
 let descripcionImg = document.getElementById('descripcionIMG')
@@ -13,6 +14,9 @@ let modal = document.getElementById('modalImg')
 btnSalir.addEventListener('click', ()=>{
 modal.close()
 })
+
+//imagen del modal
+let imgModal = document.getElementById('imgMuestra')
 
 
 
@@ -92,6 +96,7 @@ for (let m = 0; m < imgs.length; m++) {
   img.addEventListener('click', ()=>{
 
     if (img.src == imgs[m].imgs) {
+      imgModal.src = revisaImgs
       modalTitle.innerHTML = revisaTitle
     }
     modal.showModal()
