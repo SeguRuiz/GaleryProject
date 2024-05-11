@@ -8,7 +8,9 @@ let btnSalir = document.getElementById('salirModal')
 
 //Modal
 let modalTitle = document.getElementById('modalTitle')
-let modalDEsc = document.getElementById('modalDesc')
+let modalDesc = document.getElementById('modalDesc')
+
+
 
 let modal = document.getElementById('modalImg')
 btnSalir.addEventListener('click', ()=>{
@@ -79,7 +81,8 @@ window.location.href = 'http://127.0.0.1:5500/Login.html'
 for (let m = 0; m < imgs.length; m++) {
   const revisaImgs = imgs[m].imgs;
   const revisaTitle = imgs[m].titulo
-
+  const revisaDesc = imgs[m].Desc
+  
 
   let div = document.createElement('div')
   let img = document.createElement('img')
@@ -98,15 +101,18 @@ for (let m = 0; m < imgs.length; m++) {
     if (img.src == imgs[m].imgs) {
       imgModal.src = revisaImgs
       modalTitle.innerHTML = revisaTitle
+      modalDesc.innerHTML = revisaDesc
     }
     modal.showModal()
-  })
+  }) 
     
   
   
   
   
 }
+
+
 
 
 
@@ -125,6 +131,7 @@ inputTitulo.addEventListener("change", (x) => {
 
   leelo.addEventListener("load", () => {
     let img = {
+      Desc: descripcionImg.value,
       titulo: tituloImg.value,
       usuario: usuarios.nombre,
       imgs: leelo.result,
