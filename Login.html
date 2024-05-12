@@ -1,42 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link rel="stylesheet" href="/Styles/styles.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+  </head>
+  <body class="centrar">
     <div class="cajaPrincipal">
-        <div class="diseñoEjem">
-          <div class="fila1">
-            <div class="caja">1</div>
-            <div class="caja">2</div>
-            <div class="caja">3</div>
+      <div class="diseñoEjem">
+        <div class="fila1">
+          <div class="caja"><img src="/Styles/img/manchaPng.png" style=" height: 125px; width: 75px; border-radius: 10px; position: absolute;"></div>
+          <div class="caja">
+            <img
+              src="/Styles/img/_Contenido dentro de descripcion  (1).png"
+              style="
+                position: absolute;
+                width: 171px;
+                height: 125px;
+                border-radius: 10px;
+              "
+            />
           </div>
-          <div class="fila2">
-            <div class="caja">1</div>
-            <div class="caja">2</div>
-            <div class="caja">3</div>
+          <div class="caja"><img src="/Styles/img/cuadrosPng.png" alt="" style=" height: 125px; width: 75px; border-radius: 10px; position: absolute;"></div>
+        </div>
+        <div class="fila2">
+          <div class="caja">
+            <img
+              src="/Styles/img/rioPng.png"
+              alt=""
+              style="
+                position: absolute;
+                width: 120px;
+                height: 125px;
+                border-radius: 10px;
+              "
+            />
           </div>
-          <div class="fila3">
-            <div class="caja">1</div>
-            <div class="caja">2</div>
-            <div class="caja">3</div>
+          <div class="caja"><img src="/Styles/img/FlechasPng.png" alt="" style="border-radius: 10px; width: 82px; height: 125px; position: absolute;"></div>
+          <div class="caja">
+            <img
+              src="/Styles/img/columnasPng.png"
+              alt=""
+              style="
+                position: absolute;
+                width: 120px;
+                height: 125px;
+                border-radius: 10px;
+              "
+            />
           </div>
         </div>
-        <div class="inputsLog">
-          <form id="formLog" class="inputs">
-            
-            <input type="text" placeholder="Email..." id="inputsLemail" class="inputsL" required autofocus>
-            <input type="password" placeholder="Password" id="inputsLpassword" class="inputsL" required autofocus>
-             <input type="submit" name="" id="" class="btnL">
-          </form>
-          <div class="registerBtn"><a href="Register.html"><button class="registrate">No tienes cuenta aun? Registrate!</button></a></div>
+        <div class="fila3">
+          <div class="caja"><img src="/Styles/img/8.png" alt="" style=" height: 125px; width: 75px; border-radius: 10px; position: absolute;"></div>
+          <div class="caja">
+            <img
+              src="/Styles/img/puntiagudoPng.png"
+              alt=""
+              style="
+                position: absolute;
+                width: 171px;
+                height: 125px;
+                border-radius: 10px;
+              "
+            />
+          </div>
+          <div class="caja"><img src="/Styles/img/9.png" alt="" style=" height: 125px; width: 75px; border-radius: 10px; position: absolute;"></div>
         </div>
       </div>
-  
-      <script src="Login.js"></script>
-</body>    
+      <div class="inputsLog">
+        <form id="formLog" class="inputs">
+          <input
+            type="text"
+            placeholder="User..."
+            id="inputsLuser"
+            class="inputsL"
+            required
+            autofocus
+          />
+          <input
+            type="text"
+            placeholder="Email..."
+            id="inputsLemail"
+            class="inputsL"
+            required
+            autofocus
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="inputsLpassword"
+            class="inputsL"
+            required
+            autofocus
+          />
+          <input type="submit" name="" id="" class="btnL" />
+        </form>
+        <div class="registerBtn">
+          <a href="Register.html"
+            ><button class="registrate">
+              No tienes cuenta aun? Registrate!
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
 
+    <script src="/js/Login.js"></script>
+  </body>
 </html>
