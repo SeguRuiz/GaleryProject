@@ -1,0 +1,249 @@
+#body {
+  background-color: #2a2438;
+  margin: 0;
+  padding: 10px;
+}
+.gridPrincipal {
+  background-color: li;
+  height: 700px;
+  background-color: ;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10% auto;
+  background-color: #2a2438;
+}
+/*nav*/
+.nav {
+  color: #dbd8e3;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 60% auto auto;
+
+  background-color: ;
+}
+
+.userInfo {
+  border-radius: 10px;
+  font-size: 40px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+
+  background-color: #5c5470;
+}
+
+.registrate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ;
+}
+
+.logeateDevuelta {
+  color: #dbd8e3;
+  background-color: #5c5470;
+  font-size: 30px;
+  padding: 5px 15px 5px 15px;
+  border-style: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.logeateDevuelta:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  filter: drop-shadow(0px 1px 3px #dbd8e3);
+}
+
+.logOutBtn {
+  color: #dbd8e3;
+  background-color: #5c5470;
+  font-size: 30px;
+  padding: 5px 10px 5px 10px;
+  border-style: none;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+.logOutBtn:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  filter: drop-shadow(0px 1px 3px #dbd8e3);
+}
+.logOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: ;
+}
+
+/*main*/
+
+.main {
+  display: grid;
+  grid-template-columns: 60% auto;
+  gap: 20px;
+}
+
+.relleno {
+  border-radius: 20px;
+  margin: 10px;
+  display: grid;
+
+  grid-template-rows: 40% auto;
+  background-color: ;
+}
+
+.inputs {
+  border-radius: 10px;
+  background-color: #5c5470;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  background-color: ;
+}
+.inputTitulo2 {
+  background-color: #dbd8e3;
+  margin: 20px 10px 20px 10px;
+  border-style: none;
+  border-radius: 20px;
+}
+::-webkit-input-placeholder {
+  color: #5c5470;
+}
+#inputTitulo2:focus {
+  outline: none;
+}
+#inputTitulo {
+  background-color: ;
+  margin-left: 5px;
+}
+.subeAaqui {
+  margin-left: 10px;
+}
+
+.tomaArchivo {
+  font-size: 20px;
+  color: #dbd8e3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5c5470;
+}
+
+.imagenes {
+  margin: 10px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 5px;
+}
+
+.divImg {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: lightgreen;
+  transition-duration: 0.3s;
+}
+.divImg:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+  filter: drop-shadow(0px 1px 3px #dbd8e3);
+}
+.img {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+#inputTitulo {
+  margin: ;
+}
+/*imagenes*/
+
+/*foorter*/
+
+.footer {
+  background-color: lightsalmon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+}
+
+/*modal*/
+.modalImg {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 4.5% 70% auto;
+  border-radius: 10px;
+  border-style: none;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: 600px;
+  width: 500px;
+  padding: 10px;
+  background-color: #5c5470;
+}
+
+#modalImg[open]::backdrop {
+  animation: muestreBack 0.5s forwards;
+}
+
+#modalImg::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.btnSalir {
+  display: flex;
+  justify-content: end;
+}
+
+.modalDesc {
+  font-size: 20px;
+  color: white;
+}
+
+.modalTitle {
+  color: #dbd8e3;
+  margin: 0;
+  font-size: 35px;
+
+  display: flex;
+  align-items: center;
+}
+
+.modalImgCentral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: lightseagreen;
+}
+.imgMuestra {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+.salirseModal {
+  color: white;
+  border-radius: 5px;
+  background-color: crimson;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+  border-style: none;
+}
+
+.infoImg {
+  color: #dbd8e3;
+  display: grid;
+  grid-template-rows: 30% auto;
+}
