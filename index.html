@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="/Styles/styles.css" />
+  <head>
+    <link rel="stylesheet" href="/Styles/body.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>ProjectGallery</title>
     
- <h1>Home</h1>   
- <button id="LogOut">Log Out</button>
+  </head>
+
+  <body id="body">
+    <div class="gridPrincipal">
+      <div class="nav">
+        <div class="userInfo" id="bienvenida">
+         Hmm parece que no has iniciado sesion..... 
+        </div>
+        <div class="registrate" id="logeate">
+
+          <button class="logeateDevuelta" id="logeateDevuelta">Logeate</button>
+        </div>
+        <div class="logOut" id="logOutContainer">
+        <button id="logOut" class="logOutBtn">Log Out</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="imagenes" id="imagenes">
+            
+             
+             
+                 
+
+        </div>
+        <div class="relleno">
+            <div class="inputs">
+            <input type="text" placeholder="El titulo de tu nueva imagen..." id="inputTitulo2" class="inputTitulo2">
+            <input type="text" name="" placeholder="La descripcion de tu imagen...." id="descripcionIMG" class="inputTitulo2">
+            
+            <div class="tomaArchivo">Sube tu archivo aqui!: <input type="file" id="inputTitulo"></div>
+
+            
+            
+            </div>
+          <dialog id="modalImg"  >
+                <div class="modalImg">
+                <div class="btnSalir"><button id="salirModal" class="salirseModal">X</button></div>
+                  <div class="modalImgCentral"><img src="" alt="Aqui deberia ir una imajen....." class="imgMuestra"  id="imgMuestra"></div>
+                  <div class="infoImg">
+                 <strong><p class="modalTitle" id="modalTitle">hola</p></strong>
+                 
+                 <div class="modalDesc" id="modalDesc">img descripcion</div>
+                 </div>
+                 
 
 
+            </dialog>
+      </div>
+      
+    </div>
+    
 
 
-<script src="index.js"></script>
-  
-</body>
+    
+    <script src="js/esxperimentos.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
 </html>
