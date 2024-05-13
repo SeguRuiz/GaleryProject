@@ -63,7 +63,7 @@ for (let m = 0; m < imgs.length; m++) {
   const revisaImgs = imgs[m].imgs;
   const revisaTitle = imgs[m].titulo;
   const revisaDesc = imgs[m].Desc;
-
+//crea mis contentenedores/imagenes
   let div = document.createElement("div");
   let img = document.createElement("img");
 
@@ -81,6 +81,8 @@ for (let m = 0; m < imgs.length; m++) {
         "Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen"
       )
     ) {
+    /* SI el url de la imagen que toque es IGUAL a la imagen que esta en mi registro del usuario en sesio AGARRA
+    el url QUE CUMPLE ESA IGUALDAD e igualalo a la que muestra el modal junto con los datos titulo/descripcion*/
       if (img.src == revisaImgs) {
         imgModal.src = revisaImgs;
         modalTitle.innerHTML = revisaTitle;
@@ -107,7 +109,7 @@ let inputTitulo = document.getElementById("inputTitulo");
 
 inputTitulo.addEventListener("change", () => {
   let archivo = inputTitulo.files[0];
-
+ 
   let leelo = new FileReader();
 
   leelo.addEventListener("load", () => {
@@ -118,8 +120,10 @@ inputTitulo.addEventListener("change", () => {
       usuario: usuarios.nombre,
       imgs: leelo.result,
     };
-
+   
     imgs.push(img);
+    //se CREARA una llave nueva que sera igual al USER del usuario que esta en sesion (la llave que fue creada por login)
+    //En esa llave creada en base del nombre del usuario se guardran las imagenes que ese user SUBA
     localStorage.setItem(usuarios.nombre, JSON.stringify(imgs));
 
     window.location.reload();
