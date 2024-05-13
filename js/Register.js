@@ -14,30 +14,21 @@ registerForm.addEventListener("submit", (permanece) => {
     password: password,
   };
   // local en blanco
-console.log(lista)
-let cuentas = JSON.parse(localStorage.getItem('cuentas')) || []
-cuentas.push(lista)
-console.log(cuentas)
-localStorage.setItem('cuentas', JSON.stringify(cuentas))
+  console.log(lista);
+  let cuentas = JSON.parse(localStorage.getItem("cuentas")) || [];
+  cuentas.push(lista);
+  console.log(cuentas);
+  localStorage.setItem("cuentas", JSON.stringify(cuentas));
 
+  // for comparador
+  for (let index = 0; index < cuentas.length - 1; index++) {
+    const validacion = cuentas[index].email;
 
-// for comparador
-for (let index = 0; index < cuentas.length -1; index++) {
-  const validacion = cuentas[index].email;
-
-  if (validacion == email) {
-    return alert('Este correo ya fue tomado, prueba otro!')
-    
-  }else{
-    window.location.href = 'Login.html'
-    return alert ('Fuiste registrado exitosamente')
-    
+    if (validacion == email) {
+      return alert("Este correo ya fue tomado, prueba otro!");
+    } else {
+      window.location.href = "Login.html";
+      return alert("Fuiste registrado exitosamente");
+    }
   }
-  
-}
-
-
- 
-
-
 });
