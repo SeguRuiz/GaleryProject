@@ -37,6 +37,7 @@ let usuarios = JSON.parse(localStorage.getItem("usuarios"));
 let imgs = JSON.parse(localStorage.getItem(usuarios.nombre)) || [];
 //Bienvenida
 
+//El boton logeate solo aparecera si no hay nadie en sesion, para salir de sesion usar el boton log out
 if (usuarios != null) {
   log.innerHTML = "";
 } else {
@@ -56,7 +57,7 @@ logOut.addEventListener("click", () => {
 
 //borra el login si usuarios != null
 
-//revisa datos de imagen
+//revisa datos de imagen y los muestra apenas el usuario entra
 for (let m = 0; m < imgs.length; m++) {
   const revisaDatos = imgs[m];
   const revisaImgs = imgs[m].imgs;
@@ -72,8 +73,9 @@ for (let m = 0; m < imgs.length; m++) {
 
   imagenes.appendChild(div);
   div.appendChild(img);
-
+  //Añade evento click a la imagenes creadas
   img.addEventListener("click", () => {
+    //Confirm de mostrar o borrar
     if (
       confirm(
         "Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen"
@@ -86,6 +88,7 @@ for (let m = 0; m < imgs.length; m++) {
       }
       modal.showModal();
     } else {
+      //filtra/evalua, borrando la llave de las imagenes y pone el array filtrado para eliminar la imagen seleccionada
       let elimina = imgs.find((eliminalo) => eliminalo.imgs == img.src);
       if (elimina == revisaDatos) {
         imgs = imgs.filter((posicion) => posicion !== revisaDatos);
@@ -102,12 +105,13 @@ for (let m = 0; m < imgs.length; m++) {
 //guarda imagenes
 let inputTitulo = document.getElementById("inputTitulo");
 
-inputTitulo.addEventListener("change", (x) => {
+inputTitulo.addEventListener("change", () => {
   let archivo = inputTitulo.files[0];
 
   let leelo = new FileReader();
 
   leelo.addEventListener("load", () => {
+    //inserta el objeto apenas el archvio entra al input type='file'
     let img = {
       Desc: descripcionImg.value,
       titulo: tituloImg.value,
