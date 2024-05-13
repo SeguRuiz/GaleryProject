@@ -9,7 +9,7 @@ let btnSalir = document.getElementById("salirModal");
 //Modal
 let modalTitle = document.getElementById("modalTitle");
 let modalDesc = document.getElementById("modalDesc");
-
+//Cerrar modal
 let modal = document.getElementById("modalImg");
 btnSalir.addEventListener("click", () => {
   modal.close();
@@ -56,6 +56,7 @@ logOut.addEventListener("click", () => {
 
 //revisa datos de imagen
 for (let m = 0; m < imgs.length; m++) {
+  const revisaDatos =imgs[m]
   const revisaImgs = imgs[m].imgs;
   const revisaTitle = imgs[m].titulo;
   const revisaDesc = imgs[m].Desc;
@@ -70,16 +71,38 @@ for (let m = 0; m < imgs.length; m++) {
   imagenes.appendChild(div);
   div.appendChild(img);
 
+  
+
   img.addEventListener("click", () => {
-    if (img.src == imgs[m].imgs) {
+
+    
+    if (confirm('Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen') == true) {
+      
+    
+    if (img.src == revisaImgs) {
+      
       imgModal.src = revisaImgs;
       modalTitle.innerHTML = revisaTitle;
       modalDesc.innerHTML = revisaDesc;
+      
     }
-    modal.showModal();
+    modal.showModal()
+    }else{
+    let elimina = imgs.find(eliminalo => eliminalo.imgs == img.src)
+    if (elimina == revisaDatos) {
+      imgs = imgs.filter(posicion => posicion !== revisaDatos)
+      console.log(imgs)
+      localStorage.removeItem(usuarios.nombre)
+      localStorage.setItem(usuarios.nombre, JSON.stringify(imgs))
+      window.location.reload()
+
+    }else{
+      console.log(false)
+    }
+  }
+    
   });
 }
-
 //crea elemento automatico
 
 //guarda imagenes
