@@ -247,3 +247,18 @@
   display: grid;
   grid-template-rows: 30% auto;
 }
+
+
+
+#eliminarImagen{
+color: white;
+border-style: none;
+border-radius: 10px;
+background-color: crimson;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+
+}
+

@@ -1,4 +1,6 @@
 let log = document.getElementById("logeate");
+//boton eliminar imagen
+let btnEliminar =document.getElementById('eliminarImagen')
 
 //titulo y descripcion de la imagen
 let tituloImg = document.getElementById("inputTitulo2");
@@ -14,6 +16,7 @@ let modal = document.getElementById("modalImg");
 btnSalir.addEventListener("click", () => {
   modal.close();
 });
+
 
 //imagen del modal
 let imgModal = document.getElementById("imgMuestra");
@@ -43,6 +46,9 @@ if (usuarios != null) {
 
 document.getElementById("bienvenida").innerHTML =
   "Bienvenid@ " + usuarios.nombre + " ¿que imagen subiras hoy?";
+
+
+
 
 //log out funcion
 logOut.addEventListener("click", () => {
@@ -76,8 +82,10 @@ for (let m = 0; m < imgs.length; m++) {
   img.addEventListener("click", () => {
 
     
-    if (confirm('Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen') == true) {
+    
+    if (confirm('Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen')) {
       
+    
     
     if (img.src == revisaImgs) {
       
@@ -95,13 +103,14 @@ for (let m = 0; m < imgs.length; m++) {
       localStorage.removeItem(usuarios.nombre)
       localStorage.setItem(usuarios.nombre, JSON.stringify(imgs))
       window.location.reload()
-
-    }else{
-      console.log(false)
+    
     }
   }
     
-  });
+  })
+  
+    
+  
 }
 //crea elemento automatico
 
@@ -132,35 +141,3 @@ inputTitulo.addEventListener("change", (x) => {
 
 //agarra archivos del local storage
 
-//Afinar esta logica para mañana
-/*if (usuarios != null) {
-  document.getElementById("logeate").innerHTML = "";
-  bienvenida.innerHTML = "Bienvenido " + usuarios.nombre;
-  btn.addEventListener("click", () => {
-    let usuarioSesion = {
-      nombre: usuarios.nombre,
-      texto: input.value,
-    };
-
-    let sesion = JSON.parse(localStorage.getItem("usua")) || [];
-    sesion.push(usuarioSesion);
-    localStorage.setItem("usua", JSON.stringify(sesion));
-
-    let comprobarN = sesion.find(
-      (encuentra) => encuentra.nombre == usuarios.nombre
-    );
-    if (comprobarN) {
-      texto.innerText = comprobarN.texto;
-      document.getElementById("body").appendChild(texto);
-    }
-  });
-  if (localStorage.getItem("sesionDE") == usuarios.nombre) {
-  }
-} else {
-  bienvenida.innerHTML = "No hay nadie aqui";
-}
-
-logOut.addEventListener("click", () => {
-  localStorage.removeItem("usuarios");
-  window.location.reload();
-});*/
