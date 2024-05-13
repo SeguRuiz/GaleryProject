@@ -1,6 +1,6 @@
 let log = document.getElementById("logeate");
 //boton eliminar imagen
-let btnEliminar =document.getElementById('eliminarImagen')
+let btnEliminar = document.getElementById("eliminarImagen");
 
 //titulo y descripcion de la imagen
 let tituloImg = document.getElementById("inputTitulo2");
@@ -16,7 +16,6 @@ let modal = document.getElementById("modalImg");
 btnSalir.addEventListener("click", () => {
   modal.close();
 });
-
 
 //imagen del modal
 let imgModal = document.getElementById("imgMuestra");
@@ -47,9 +46,6 @@ if (usuarios != null) {
 document.getElementById("bienvenida").innerHTML =
   "Bienvenid@ " + usuarios.nombre + " ¿que imagen subiras hoy?";
 
-
-
-
 //log out funcion
 logOut.addEventListener("click", () => {
   window.location.reload();
@@ -62,7 +58,7 @@ logOut.addEventListener("click", () => {
 
 //revisa datos de imagen
 for (let m = 0; m < imgs.length; m++) {
-  const revisaDatos =imgs[m]
+  const revisaDatos = imgs[m];
   const revisaImgs = imgs[m].imgs;
   const revisaTitle = imgs[m].titulo;
   const revisaDesc = imgs[m].Desc;
@@ -77,40 +73,29 @@ for (let m = 0; m < imgs.length; m++) {
   imagenes.appendChild(div);
   div.appendChild(img);
 
-  
-
   img.addEventListener("click", () => {
-
-    
-    
-    if (confirm('Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen')) {
-      
-    
-    
-    if (img.src == revisaImgs) {
-      
-      imgModal.src = revisaImgs;
-      modalTitle.innerHTML = revisaTitle;
-      modalDesc.innerHTML = revisaDesc;
-      
+    if (
+      confirm(
+        "Presiona ACEPTAR para ver la imagen / Presiona CANCELAR para ELIMINAR la imagen"
+      )
+    ) {
+      if (img.src == revisaImgs) {
+        imgModal.src = revisaImgs;
+        modalTitle.innerHTML = revisaTitle;
+        modalDesc.innerHTML = revisaDesc;
+      }
+      modal.showModal();
+    } else {
+      let elimina = imgs.find((eliminalo) => eliminalo.imgs == img.src);
+      if (elimina == revisaDatos) {
+        imgs = imgs.filter((posicion) => posicion !== revisaDatos);
+        console.log(imgs);
+        localStorage.removeItem(usuarios.nombre);
+        localStorage.setItem(usuarios.nombre, JSON.stringify(imgs));
+        window.location.reload();
+      }
     }
-    modal.showModal()
-    }else{
-    let elimina = imgs.find(eliminalo => eliminalo.imgs == img.src)
-    if (elimina == revisaDatos) {
-      imgs = imgs.filter(posicion => posicion !== revisaDatos)
-      console.log(imgs)
-      localStorage.removeItem(usuarios.nombre)
-      localStorage.setItem(usuarios.nombre, JSON.stringify(imgs))
-      window.location.reload()
-    
-    }
-  }
-    
-  })
-  
-    
-  
+  });
 }
 //crea elemento automatico
 
@@ -140,4 +125,3 @@ inputTitulo.addEventListener("change", (x) => {
 });
 
 //agarra archivos del local storage
-
